@@ -14,7 +14,7 @@ declare (strict_types = 1);
 
 namespace GrottoPress\Mobile;
 
-use \Mobile_Detect;
+use Mobile_Detect;
 
 /**
  * Mobile Detector
