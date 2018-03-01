@@ -61,13 +61,13 @@ class Detector extends Mobile_Detect
     public function isSmart(): bool
     {
         return (
-            $this->isAndroidOS()
-            || $this->isBlackBerryOS()
-            || $this->isWindowsMobileOS()
-            || $this->isWindowsPhoneOS()
-            || $this->isiOS()
-            || $this->iswebOS()
-            || $this->isbadaOS()
+            $this->isAndroidOS() ||
+            $this->isBlackBerryOS() ||
+            $this->isWindowsMobileOS() ||
+            $this->isWindowsPhoneOS() ||
+            $this->isiOS() ||
+            $this->iswebOS() ||
+            $this->isbadaOS()
         );
     }
 }
