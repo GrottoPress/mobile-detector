@@ -1,36 +1,12 @@
 <?php
-
-/**
- * Mobile Detector
- *
- * @package GrottoPress\Mobile
- * @since 0.1.0
- *
- * @author GrottoPress <info@grottopress.com>
- * @author N Atta Kus Adusei
- */
-
 declare (strict_types = 1);
 
 namespace GrottoPress\Mobile;
 
-use \Mobile_Detect;
+use Mobile_Detect;
 
-/**
- * Mobile Detector
- *
- * @since 0.1.0
- */
 class Detector extends Mobile_Detect
 {
-    /**
-     * Get current device's browser.
-     *
-     * @since 0.1.0
-     * @access public
-     *
-     * @return string Device's browser.
-     */
     public function getBrowser(): string
     {
         foreach ($this::$browsers as $browser => $UA) {
@@ -44,14 +20,6 @@ class Detector extends Mobile_Detect
         return '';
     }
 
-    /**
-     * Get current device's operating system.
-     *
-     * @since 0.1.0
-     * @access public
-     *
-     * @return string Device's OS.
-     */
     public function getOperatingSystem(): string
     {
         foreach ($this::$operatingSystems as $os => $UA) {
@@ -65,14 +33,6 @@ class Detector extends Mobile_Detect
         return '';
     }
 
-    /**
-     * Get current device brand/manufacturer.
-     *
-     * @since 0.1.0
-     * @access public
-     *
-     * @return string Device type.
-     */
     public function getDevice(): string
     {
         $devices = $this->getDevices();
@@ -88,50 +48,26 @@ class Detector extends Mobile_Detect
         return '';
     }
 
-    /**
-     * All device brands/manufacturers.
-     *
-     * @since 0.1.0
-     * @access public
-     *
-     * @return array Devices.
-     */
     public function getDevices(): array
     {
         return \array_merge($this::$phoneDevices, $this::$tabletDevices);
     }
 
-    /**
-     * Is device a phone
-     *
-     * @since 0.1.0
-     * @access public
-     *
-     * @return bool
-     */
     public function isPhone(): bool
     {
         return \array_key_exists($this->getDevice(), $this::$phoneDevices);
     }
 
-    /**
-     * Is device a smart device?
-     *
-     * @since 0.1.0
-     * @access public
-     *
-     * @return bool
-     */
     public function isSmart(): bool
     {
         return (
-            $this->isAndroidOS()
-            || $this->isBlackBerryOS()
-            || $this->isWindowsMobileOS()
-            || $this->isWindowsPhoneOS()
-            || $this->isiOS()
-            || $this->iswebOS()
-            || $this->isbadaOS()
+            $this->isAndroidOS() ||
+            $this->isBlackBerryOS() ||
+            $this->isWindowsMobileOS() ||
+            $this->isWindowsPhoneOS() ||
+            $this->isiOS() ||
+            $this->iswebOS() ||
+            $this->isbadaOS()
         );
     }
 }
