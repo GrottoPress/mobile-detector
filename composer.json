@@ -1,51 +1,51 @@
 {
-    "name": "grottopress/mobile-detector",
-    "description": "Detect mobile devices and user agents.",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "GrottoPress.com",
-            "email": "info@grottopress.com",
-            "homepage": "https://www.grottopress.com"
-        },
-        {
-          "name": "N Atta Kusi Adusei",
-          "homepage": "https://twitter.com/akadusei",
-          "role": "Developer"
-        }
-    ],
-    "keywords": ["mobile"],
-    "support": {
-        "issues": "https://github.com/GrottoPress/mobile-detectors/issues",
-        "wiki": "https://github.com/GrottoPress/mobile-detectors/wiki",
-        "source": "https://github.com/GrottoPress/mobile-detectors/"
+  "name": "grottopress/mobile-detector",
+  "description": "Detect mobile devices and user agents.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "GrottoPress.com",
+      "email": "info@grottopress.com",
+      "homepage": "https://www.grottopress.com"
     },
-    "require": {
-        "php": ">=7.0",
-        "mobiledetect/mobiledetectlib": "^2.8"
-    },
-    "require-dev": {
-        "codeception/codeception": "^2.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "GrottoPress\\Mobile\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "GrottoPress\\Mobile\\": "tests/unit/"
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "chmod +x ./bin/*"
-        ],
-        "test": [
-            "./vendor/bin/codecept run unit"
-        ],
-        "release": [
-            "./bin/release"
-        ]
+    {
+      "name": "N Atta Kusi Adusei",
+      "homepage": "https://twitter.com/akadusei",
+      "role": "Developer"
     }
+  ],
+  "keywords": ["mobile"],
+  "support": {
+    "issues": "https://github.com/GrottoPress/mobile-detectors/issues",
+    "wiki": "https://github.com/GrottoPress/mobile-detectors/wiki",
+    "source": "https://github.com/GrottoPress/mobile-detectors/"
+  },
+  "require": {
+    "php": ">=7.0",
+    "mobiledetect/mobiledetectlib": "^2.8"
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "GrottoPress\\Mobile\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GrottoPress\\Mobile\\": "tests/unit/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "chmod +x ./bin/*"
+    ],
+    "test": [
+      "./vendor/bin/codecept run unit"
+    ],
+    "release": [
+      "./bin/release"
+    ]
+  }
 }
