@@ -4,55 +4,55 @@
 
 Detect mobile devices and user agents. This is an extension of the [Mobile_Detect](https://github.com/serbanghita/Mobile-Detect) library
 
+## Installation
+
+Install via composer: `composer require grottopress/mobile-detector`
+
 ## Usage
 
-Install via composer:
+```php
+use GrottoPress\Mobile\Detector;
 
-`composer require grottopress/mobile-detector`
+$detector = new Detector();
 
-Use thus:
+// Check if is iOS
+if ($detector->isiOS()) {
+    //
+}
 
-    use GrottoPress\Mobile\Detector;
+// Check if is android
+if ($detector->isAndroidOS()) {
+    //
+}
 
-    $detector = new Detector();
+// Check if is smart device
+if ($detector->isSmart()) {
+    //
+}
 
-    // Check if is iOS
-    if ($detector->isiOS()) {
-        //
-    }
+// Check if is phone
+if ($detector->isPhone()) {
+    //
+}
 
-    // Check if is android
-    if ($detector->isAndroidOS()) {
-        //
-    }
+// Check if is tablet
+if ($detector->isTablet()) {
+    //
+}
 
-    // Check if is smart device
-    if ($detector->isSmart()) {
-        //
-    }
+// Check if is Samsung tablet
+if ($detector->isSamsungTablet()) {
+    //
+}
 
-    // Check if is phone
-    if ($detector->isPhone()) {
-        //
-    }
+// Detect current device
+$device = $detector->getDevice();
 
-    // Check if is tablet
-    if ($detector->isTablet()) {
-        //
-    }
+// Detect current browser
+$browser = $detector->getBrowser();
 
-    // Check if is Samsung tablet
-    if ($detector->isSamsungTablet()) {
-        //
-    }
-    
-    // Detect current device
-    $device = $detector->getDevice();
+// Detect current OS
+$os = $detector->getOperatingSystem();
 
-    // Detect current browser
-    $browser = $detector->getBrowser();
-
-    // Detect current OS
-    $os = $detector->getOperatingSystem();
-
-    // More examples here: https://github.com/serbanghita/Mobile-Detect/wiki/Code-examples
+// More examples here: https://github.com/serbanghita/Mobile-Detect/wiki/Code-examples
+```
