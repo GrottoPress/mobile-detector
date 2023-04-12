@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Add support for PHP 8
 
+### Changed
+- Replace Travis-CI with Github actions
+
 ## [0.1.6] - 2020-02-08
 
 ### Added
