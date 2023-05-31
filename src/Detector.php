@@ -62,10 +62,10 @@ class Detector extends Mobile_Detect
     {
         return (
             $this->isAndroidOS() ||
+            $this->isiOS() ||
             $this->isBlackBerryOS() ||
             $this->isWindowsMobileOS() ||
             $this->isWindowsPhoneOS() ||
-            $this->isiOS() ||
             $this->iswebOS() ||
             $this->isbadaOS()
         );
